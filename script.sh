@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefial
+set -euo pipefail
 
 # ===========================================
 # 1. GLOBAL VARIABLES & CONSTANTS
