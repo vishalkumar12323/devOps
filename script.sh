@@ -64,7 +64,7 @@ run_loops_demo() {
 
     echo "----- For loop (Sequence) ------"
     for i in {1...3}; do 
-        echo "Processing item step: $1 of 3"
+        echo "Processing item step: $i of 3"
     done
 
     # While loop
@@ -112,8 +112,8 @@ capture_runtime_data() {
     echo "-----------------------------"
     read -t 10 -p "Do you want to clear log history? (y/N): " user_confirmation
 
-    if [["${user_confirmation,,}" == "y" || "${user_confirmation,,}" == "yes"]]
-        log_message "INFO" "Clearing old logs."
+    if [[ "${user_confirmation,,}" == "y" || "${user_confirmation,,}" == "yes" ]]; then
+        log_message "INFO" "Clearing old logs as requested."
         rm -f "$LOG_DIR"/*.log 2>/dev/null || true
     else
         log_message "INFO" "Skipping log cleanup."
