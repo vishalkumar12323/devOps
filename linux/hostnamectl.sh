@@ -12,4 +12,4 @@ hostnamectl
 # Change the hostname
 hostnamectl set-hostname my-laptop
 #or
-sudo nano /etc/hostname # Edit menuallys
+sudo nano /etc/hostname # Edit menually
