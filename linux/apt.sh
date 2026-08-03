@@ -4,6 +4,7 @@
 sudo apt update # Refreshes the list of available software and versions.
 
 sudo apt upgrade # Install the newest versions of all current apps.
+sudo apt dist-upgrade
 
 sudo apt install <package> # Download and install specific package.
 
