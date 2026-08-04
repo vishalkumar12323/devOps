@@ -13,3 +13,7 @@ sudo pacman -R <package>
 # Searching packages using keywords
 pacman -Ss <keyword>
 pacman -Ss pygame
+
+
+# find orphine packages or residual packages and libraries
+pacman -Qdt
