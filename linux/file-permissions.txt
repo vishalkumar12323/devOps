@@ -1,0 +1,34 @@
+
+
+permission-string               User     Group     Size      Date           Dir/file name
+d|rwx|r-x|r-x             2    vishal    vishal    4096    Jul 26 08:23        test
+
+/**
+    || d: directory || r: read || w: write || x: execute ||
+
+
+    d -> Indicates Is it a file? A directory? A Link?
+    rwx -> The second section: Permissions for the User, User that own the file
+
+    r-x -> The third section: Permissions for the Group
+    r-x -> The fourth section: Permissions for "Other"
+**/
+
+
+-rwxr-xr-x     1    vishal    vishal    4563    Jul 27 10:36    script.sh
+
+/**
+    Assigning and Removing permissions from the dir/files
+
+    # Assign read, write, execute permission for all (User, Group, Other)
+    chmod +r <filename>
+    chmod +w <filename>
+    chmod +x <filename>
+
+
+    # Assign rwx permission for only u(User), g(Group), o(Other)
+    chmod u+r <filename>
+    chmod g+w <filename>
+    chmod o+x <filename>
+**/
+
