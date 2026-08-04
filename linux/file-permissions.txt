@@ -25,10 +25,36 @@ d|rwx|r-x|r-x             2    vishal    vishal    4096    Jul 26 08:23        t
     chmod +w <filename>
     chmod +x <filename>
 
+    chmod +rwx <filename>
+
 
     # Assign rwx permission for only u(User), g(Group), o(Other)
     chmod u+r <filename>
     chmod g+w <filename>
     chmod o+x <filename>
+
+    chmod u+wx <filename>
 **/
 
+
+/**
+    --- Numeric reparestation of permission.
+    r=4
+    w=2
+    x=1
+
+    4+2+1=7 is the highest numeric reparestation
+    7 means we can assign all read, write, and execute permission using single digit.
+
+    Example 1
+    chmod 700 <filename> # Assign all rwx for user only
+    chmod 770 <filename> # For user and group 
+    chmod 777 <filename> # For all
+
+    Example 2
+    chmod 751 <filename> # Means the User have all rwx permission, Group has only rx permission, and Other has only x permission
+
+    chmod 540 <filename>
+
+
+**/
