@@ -1,0 +1,58 @@
+
+
+#permission-string               User     Group     Size      Date           Dir/file name
+# d|rwx|r-x|r-x             2    vishal    vishal    4096    Jul 26 08:23        test
+
+# /**
+    # || d: directory || r: read || w: write || x: execute ||
+
+
+    # d -> Indicates Is it a file? A directory? A Link?
+    # rwx -> The second section: Permissions for the User, User that own the file
+
+    # r-x -> The third section: Permissions for the Group
+    # r-x -> The fourth section: Permissions for "Other"
+# **/
+
+
+# -rwxr-xr-x     1    vishal    vishal    4563    Jul 27 10:36    script.sh
+
+#/**
+    #Assigning and Removing permissions from the dir/files
+
+    # Assign read, write, execute permission for all (User, Group, Other)
+    chmod +r file.ext
+    chmod +w file.ext
+    chmod +x file.ext
+
+    chmod +rwx file.ext
+
+
+    # Assign rwx permission for only u(User), g(Group), o(Other)
+    chmod u+r file.ext
+    chmod g+w file.ext
+    chmod o+x file.ext
+
+    chmod u+wx file.ext
+#**/
+
+
+#/**
+    #--- Numeric reparestation of permission.
+    # r=4
+    # w=2
+    # x=1
+
+    # 4+2+1=7 is the highest numeric reparestation
+    # 7 means we can assign all read, write, and execute permission using single digit.
+
+    # Example 1
+    chmod 700 file.ext # Assign all rwx for user only
+    chmod 770 file.ext # For user and group 
+    chmod 777 file.ext # For all
+
+    # Example 2
+    chmod 751 file.ext # Means the User have all rwx permission, Group has only rx permission, and Other has only x permission
+
+    chmod 540 file.ext
+#**/
