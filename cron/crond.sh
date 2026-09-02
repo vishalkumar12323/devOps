@@ -9,7 +9,7 @@
 # * => Day of the week (0 - 6, sunday to saturday)
 
 # Example 1: Cron Job that runs on every Tuesday at 3:30AM
-30 3 * * 2 /path/to/script
+30 3 * * 2 /home/ubuntu/cron-runner/notify.sh
 
 # Example 2: A Cron job that runs every 15 minute but only during working hours(from 9:00AM to 5:00PM) Monday through Friday?
-*/15 9-16 * * 1-5 /path/to/script
+*/15 9-16 * * 1-5 /home/ubuntu/cron-runner/log-cleaner.sh
