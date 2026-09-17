@@ -1,0 +1,1 @@
+# In this guide we move our local application code to cloud, Install the required runtimes(Node.js, Python) and configure process managers(pm2, guvicorn).
