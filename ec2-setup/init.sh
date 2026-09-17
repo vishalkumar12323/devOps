@@ -17,3 +17,20 @@ sudo passwd vishal
 
 # Assign the sudo permissions
 sudo usermod -aG sudo vishal
+
+# connect to the ec2 with using ssh
+ssh -i your-identity-file.pem vishal@<ec2_public_ip>
+
+# shortcut method for connecting to any remote server using ssh
+# edit your local machine .ssh/config file:
+nano ~/.ssh/config
+
+# with the below content:
+Host my-ec2-server
+    Hostname <ec2_public_ip>
+    User vishal or ubuntu
+    IdentityFile <path_to_your_pem_file>
+    IdnetitiesOnly yes
+
+# command for connecting to server
+ssh my-ec2-server
