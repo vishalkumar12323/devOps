@@ -7,3 +7,13 @@ ssh -i identity-file.pem ubuntu@xx.xxx.xxx.xx
 sudo ls -l /etc/passwd
 # or
 sudo ls -l /home
+
+# By Default A non root user aleady created "ubuntu", but we can see how to create new user with password and assign sudo permissions
+# command for create new user:
+sudo useradd -m vishal # -m for add the user to /home dir.  
+
+# command for create new password for user vishal
+sudo passwd vishal
+
+# Assign the sudo permissions
+sudo usermod -aG sudo vishal
