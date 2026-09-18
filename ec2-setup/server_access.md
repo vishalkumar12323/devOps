@@ -66,3 +66,7 @@ Get details about sshd
 ```bash
 sudo fail2ban-client get sshd bantime
 ```
+
+```bash
+sudo fail2ban-client status sshd
+```
