@@ -19,7 +19,25 @@ sudo mkdir /application/my_project
 tar -xzvf /tmp/my_app
 ```
 
-change owner and permissions. pwd:/application/my_project
+Change owner and permissions. pwd:/application/my_project
 ```bash
 sudo chown -R username:group_name .
+```
+
+Install required modules and packages.
+```bash
+sudo apt update
+sudo apt install nginx postgresql postgres-contrib
+```
+
+Install Node using NVM.
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.7/install.sh | bash
+\. "$HOME/.nvm/nvm.sh"
+
+nvm install 24 # or --lts
+
+# Verify
+node -v # Return node version: v24.20.0
+npm -v # Return npm version: 11.19.0
 ```
