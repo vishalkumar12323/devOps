@@ -10,3 +10,16 @@ Copy the zipped folder Using SCP (Secure Copy Protocol)
 ```bash
 scp project_code.tar.gz <username>@<ip_address>:/tmp/my_app
 ```
+
+Unzip the project files into runable dir ex. /application/my_project.
+```bash
+sudo mkdir /application/my_project
+```
+```bash
+tar -xzvf /tmp/my_app
+```
+
+change owner and permissions. pwd:/application/my_project
+```bash
+sudo chown -R username:group_name .
+```
