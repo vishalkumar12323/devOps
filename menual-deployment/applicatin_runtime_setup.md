@@ -41,4 +41,3 @@ nvm install 24 # or --lts
 node -v # Return node version: v24.20.0
 npm -v # Return npm version: 11.19.0
 ```
-
