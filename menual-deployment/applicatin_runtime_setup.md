@@ -19,7 +19,7 @@ sudo mkdir /application/my_project
 tar -xzvf /tmp/my_app
 ```
 
-Change owner and permissions. pwd:/application/my_project
+Change owner and permissions for the project directory. pwd:/application/my_project
 ```bash
 sudo chown -R username:group_name .
 ```
@@ -41,3 +41,4 @@ nvm install 24 # or --lts
 node -v # Return node version: v24.20.0
 npm -v # Return npm version: 11.19.0
 ```
+
