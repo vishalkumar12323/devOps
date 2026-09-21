@@ -27,7 +27,7 @@ sudo chown -R username:group_name .
 Install required modules and packages.
 ```bash
 sudo apt update
-sudo apt install nginx postgresql postgres-contrib
+sudo apt install nginx postgresql postgres-contrib -y
 ```
 
 Install Node using NVM.
@@ -41,3 +41,4 @@ nvm install 24 # or --lts
 node -v # Return node version: v24.20.0
 npm -v # Return npm version: 11.19.0
 ```
+
