@@ -42,3 +42,17 @@ node -v # Return node version: v24.20.0
 npm -v # Return npm version: 11.19.0
 ```
 
+Install pm2 for Node.js applications process management.
+```bash
+npm install --global pm2 # install globally
+```
+
+Go to project directory
+```bash
+cd /<project-folder>
+```
+Install project dependencies and build if using TypeScript.
+```bash
+npm install
+npm run build
+```
