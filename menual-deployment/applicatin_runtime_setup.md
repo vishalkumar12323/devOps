@@ -56,3 +56,28 @@ Install project dependencies and build if using TypeScript.
 npm install
 npm run build
 ```
+
+Run the backend using pm2 in the background
+```bash
+pm2 start ./dist/index.js
+```
+Adavnce Configration: Instead of passing long flags in the command line, declare your deployment settings in a configuration file.
+Create a file named ecosystem.config.js in your backend root folder:
+```bash
+module.exports = {
+    app: [
+        {
+            name: 'backend-api',
+            script: './dist/server.js',
+            instences: 'max', #🚀 Cluster mode: utilizes all available CPU cores
+            exec_mode: 'cluster', # Enables load balancing across CPU cores
+            watch: false, # Set true only in dev; false in production
+            max_memory_restart: '1G', # Auto-restarts if a memory leak exceeds 1GB
+            env_production: {
+                NODE_ENV: 'production',
+                PORT: 3001
+            }
+        }
+    ]
+}
+```
